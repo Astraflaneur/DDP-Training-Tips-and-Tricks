@@ -1,15 +1,15 @@
 # DDP-Training-Tips-and-Tricks
 
-This is a guide that integrates **Pytorch DistributedDataParallel, Apex, warmup, learning rate scheduler**, if you need a minimal working example for the same, please check my [Medium](./minimal-distributed-tutorial/).
+This is a guide that integrates **Pytorch DistributedDataParallel, Apex, warmup, learning rate scheduler**, if you need a minimal working example for the same, please check this [code](./minimal-distributed-tutorial/).
 In the following chapters, I'll introduce how to use DistributedDataParallel (DDP) with three training techniques of Apex, warmup, and learning rate scheduler, and the set-up of early-stopping and Random seed.
 
 ## Install
 
 ```
 # Create your conda environment
-git clone https://github.com/Lance0218/Pytorch-DistributedDataParallel-Training-Tricks.git
+git clone https://github.com/Astraflaneur/DDP-Training-Tips-and-Tricks.git
 cd ./Pytorch-DistributedDataParallel-Training-Tricks
-# Modify the code in Makefile L16 to reflect your CUDA version (CUDA10.1 in my environment).
+# Modify the code in Makefile L16 to reflect your CUDA version (CUDA12.1 in my environment).
 make install-all
 ```
 
@@ -165,4 +165,4 @@ model = model.to(args.local_rank)
 ## Function implementation
 
 1. Lookahead implementation: [lookahead.pytorch](https://github.com/alphadl/lookahead.pytorch)
-2. Early-stopping, random seed implementation: [customized_function.py](https://github.com/astraflaneur/Pytorch-DistributedDataParallel-Training-Tricks/blob/master/customized_function.py)
+2. Early-stopping, random seed implementation: [customized_function.py](https://github.com/Astraflaneur/DDP-Training-Tips-and-Tricks/blob/main/utils/customized.py)
